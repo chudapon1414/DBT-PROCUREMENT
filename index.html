@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบสืบค้นครุภัณฑ์</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>ระบบสืบค้นครุภัณฑ์</h2>
+    <input type="text" id="searchBox" placeholder="ค้นหาครุภัณฑ์..." onkeyup="filterTable()">
+    
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>ชื่อครุภัณฑ์</th>
+                <th>หมายเลขครุภัณฑ์</th>
+                <th>ประเภท</th>
+                <th>สถานที่จัดเก็บ</th>
+            </tr>
+        </thead>
+        <tbody id="dataBody">
+        </tbody>
+    </table>
+    
+    <script src="script.js"></script>
+</body>
+</html>
