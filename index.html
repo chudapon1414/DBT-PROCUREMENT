@@ -7,16 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>ระบบสืบค้นครุภัณฑ์ DBT</h2>
+    <h2>ระบบสืบค้นครุภัณฑ์</h2>
     <input type="text" id="searchBox" placeholder="ค้นหาครุภัณฑ์..." onkeyup="filterTable()">
     
     <table id="dataTable">
         <thead>
             <tr>
-                <th>ชื่อครุภัณฑ์</th>
-                <th>หมายเลขครุภัณฑ์</th>
-                <th>ประเภท</th>
-                <th>สถานที่จัดเก็บ</th>
+                <th>ลำดับ</th>
+                <th>ว.ด.ป.</th>
+                <th>หมายเลขประจำครุภัณฑ์</th>
+                <th>รายการ</th>
+                <th>ขนาด ลักษณะ</th>
+                <th>ได้มาโดยวิธีใด</th>
+                <th>จำนวน</th>
+                <th>ราคา/หน่วย (บาท)</th>
+                <th>หมายเหตุ</th>
             </tr>
         </thead>
         <tbody id="dataBody">
