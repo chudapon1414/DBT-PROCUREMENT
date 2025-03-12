@@ -1,5 +1,5 @@
 // URL ของ JSON ที่ดึงจาก Google Apps Script API
-const apiUrl = "https://script.google.com/macros/s/AKfycbyfMSBXZXTDpwx0NPjRXILzeTHhDXe6cFjL1jZ6N5ThGaCzsHTBKQ1OnOmoGQudBZe5ag/exec"; // แก้ไข URL ตามที่คุณสร้างไว้
+const apiUrl = "https://script.google.com/macros/s/AKfycbyymK2M1YOyhF1sq7i49r00C6g8VpUsEBjhrL1TAcOFu9qnufml1FmSysBbUF1lsHJu/exec"; // แก้ไข URL ตามที่คุณสร้างไว้
 
 // ฟังก์ชันดึงข้อมูลจาก Google Sheet
 async function fetchData() {
