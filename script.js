@@ -1,4 +1,4 @@
-const apiUrl = "https://script.google.com/macros/s/xxxxx/exec"; // เปลี่ยนเป็น URL ของคุณ
+const apiUrl = "https://script.google.com/macros/s/AKfycbzUkHVmVunjuSRX5bJvSvfgpmxCYqtvAVUqOfy2ZudxSi8-G_FwnmsW2L8Y6n6gDvNzEQ/exec"; // เปลี่ยนเป็น URL ของคุณ
 
 async function fetchData() {
     try {
