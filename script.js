@@ -1,5 +1,5 @@
 // URL ของ JSON ที่ดึงจาก Google Apps Script API
-const apiUrl = "https://script.google.com/macros/s/AKfycbyymK2M1YOyhF1sq7i49r00C6g8VpUsEBjhrL1TAcOFu9qnufml1FmSysBbUF1lsHJu/exec"; // แก้ไข URL ตามที่คุณสร้างไว้
+const apiUrl = "https://script.google.com/macros/s/xxxxx/exec"; // เปลี่ยนเป็น URL ของคุณ
 
 // ฟังก์ชันดึงข้อมูลจาก Google Sheet
 async function fetchData() {
@@ -18,16 +18,20 @@ function displayData(data) {
     tableBody.innerHTML = "";
     data.forEach(item => {
         let row = `<tr>
-            <td>${item["ชื่อครุภัณฑ์"]}</td>
-            <td>${item["หมายเลขครุภัณฑ์"]}</td>
-            <td>${item["ประเภท"]}</td>
-            <td>${item["สถานที่จัดเก็บ"]}</td>
+            <td>${item["equipment_name"]}</td>
+            <td>${item["equipment_id"]}</td>
+            <td>${item["category"]}</td>
+            <td>${item["location"]}</td>
+            <td>${item["acquisition_date"]}</td>
+            <td>${item["price"]}</td>
+            <td>${item["status"]}</td>
+            <td>${item["owner"]}</td>
         </tr>`;
         tableBody.innerHTML += row;
     });
 }
 
-// ฟังก์ชันกรองข้อมูลจากช่องค้นหา
+// ฟังก์ชันกรองข้อมูลจากช่องค้นหา โดยสามารถค้นหาทุกฟิลด์
 function filterTable() {
     let searchValue = document.getElementById("searchBox").value.toLowerCase();
     let rows = document.querySelectorAll("#dataBody tr");
@@ -35,6 +39,15 @@ function filterTable() {
         let text = row.textContent.toLowerCase();
         row.style.display = text.includes(searchValue) ? "" : "none";
     });
+}
+
+// ฟังก์ชันพิมพ์ตารางข้อมูล
+function printTable() {
+    let printContents = document.getElementById("dataTable").outerHTML;
+    let originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
 }
 
 // เรียกใช้งานฟังก์ชันดึงข้อมูลเมื่อโหลดหน้าเว็บ
