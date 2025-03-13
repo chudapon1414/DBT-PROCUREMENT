@@ -1,7 +1,5 @@
-// URL ของ JSON ที่ดึงจาก Google Apps Script API
 const apiUrl = "https://script.google.com/macros/s/xxxxx/exec"; // เปลี่ยนเป็น URL ของคุณ
 
-// ฟังก์ชันดึงข้อมูลจาก Google Sheet
 async function fetchData() {
     try {
         let response = await fetch(apiUrl);
@@ -12,7 +10,6 @@ async function fetchData() {
     }
 }
 
-// ฟังก์ชันแสดงข้อมูลในตาราง
 function displayData(data) {
     let tableBody = document.getElementById("dataBody");
     tableBody.innerHTML = "";
@@ -31,7 +28,6 @@ function displayData(data) {
     });
 }
 
-// ฟังก์ชันกรองข้อมูลจากช่องค้นหา โดยสามารถค้นหาทุกฟิลด์
 function filterTable() {
     let searchValue = document.getElementById("searchBox").value.toLowerCase();
     let rows = document.querySelectorAll("#dataBody tr");
@@ -41,7 +37,6 @@ function filterTable() {
     });
 }
 
-// ฟังก์ชันพิมพ์ตารางข้อมูล
 function printTable() {
     let printContents = document.getElementById("dataTable").outerHTML;
     let originalContents = document.body.innerHTML;
@@ -50,5 +45,4 @@ function printTable() {
     document.body.innerHTML = originalContents;
 }
 
-// เรียกใช้งานฟังก์ชันดึงข้อมูลเมื่อโหลดหน้าเว็บ
 fetchData();
